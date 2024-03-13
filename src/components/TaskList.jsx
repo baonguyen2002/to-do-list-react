@@ -44,7 +44,7 @@ export default function TaskList({
           className="completed-delete-button"
           onClick={() => deleteAllCompletedTasks()}
         >
-          Remove all completed tasks
+          Remove All Completed Tasks
         </button>
       </div>
 
