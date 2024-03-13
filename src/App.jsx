@@ -36,18 +36,14 @@ function App() {
         ];
       });
     }
-    if (notif === "editing") {
-      setNotif(false);
-    } else {
-      setNotif("new");
-    }
   }
 
   useEffect(() => {
+    console.log(notif);
     if (notif === "new" || notif === "deleted" || notif === "edited") {
       setTimeout(() => {
         setNotif(false);
-      }, 2000);
+      }, 350);
     }
   }, [notif]);
 
@@ -96,11 +92,7 @@ function App() {
     setTaskList((taskList) => {
       return taskList.filter((task) => task.id != id);
     });
-    if (notif === "editing") {
-      setNotif(false);
-    } else {
-      setNotif("deleted");
-    }
+    setNotif("deleted");
   }
   function editTask(title, id) {
     setNotif("editing");

@@ -23,6 +23,7 @@ export default function NewTaskForm({
         return;
       }
       addTask(newTask.trim(), null);
+      setNotif("new");
       setNewTask("");
     }
   }
@@ -31,16 +32,16 @@ export default function NewTaskForm({
       <label className="input-label-text" htmlFor="text-input-field">
         TODO LIST
       </label>
-      {notif === "new" ||
-        (notif === "deleted" && (
-          <div className="success notif">
-            <p>
-              {notif === "new"
-                ? "New Task Added Successfully"
-                : "Task Deleted Successfully"}
-            </p>
-          </div>
-        ))}
+      {notif === "new" && (
+        <div className="success notif">
+          <p>New Task Added Successfully</p>
+        </div>
+      )}
+      {notif === "deleted" && (
+        <div className="success notif">
+          <p>Task Deleted Successfully</p>
+        </div>
+      )}
       {notif === "editing" && (
         <div className="warning notif">
           <p>Editing task</p>
