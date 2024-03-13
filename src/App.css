@@ -1,0 +1,29 @@
+@font-face {
+  font-family: "Poppins";
+  src: local("Poppins-Regular"),
+    url("/src/fonts/Poppins-Regular.ttf") format("ttf");
+}
+
+body {
+  font-family: "Poppins";
+  display: flex;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: #09090b;
+  justify-content: center;
+  align-items: center;
+}
+
+.app-container {
+  padding: 20px;
+  border: 1px solid black;
+  background: #19191a;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 10px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.3);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  min-width: 640px;
+  max-width: 1000px;
+  width: 800px;
+}

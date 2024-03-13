@@ -1,0 +1,64 @@
+.item-container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  font-family: "Poppins";
+  border: 1px solid #fca311;
+  padding: 0 15px;
+  border-radius: 10px;
+  background-color: black;
+  color: #fca311;
+  font-size: medium;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2px;
+  .label-container {
+    margin-right: 10px;
+    max-width: 72%;
+    p {
+      word-wrap: break-word;
+    }
+  }
+
+  .delete-button {
+    border: 1px solid black;
+    background-color: #dc143c;
+    color: rgb(54, 6, 6);
+  }
+  button {
+    padding: 10px;
+    font: inherit;
+    cursor: pointer;
+    border-radius: 10px;
+    height: 50px;
+    width: 50px;
+    margin-right: 10px;
+  }
+  .mark-incomplete-button {
+    background-color: #bd0000;
+    color: #290000;
+    border: 1px solid black;
+  }
+  .mark-ongoing-button {
+    background-color: #2f78bd;
+    border: 1px solid black;
+    color: #0b2741;
+  }
+  .mark-completed-button {
+    background-color: #2cb140;
+    border: 1px solid black;
+    color: #0f3b15;
+  }
+}
+
+.incomplete {
+  color: #bd0000;
+}
+
+.on-going {
+  color: #2f78bd;
+}
+
+.completed {
+  color: #29b43e;
+}

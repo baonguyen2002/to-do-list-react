@@ -1,0 +1,54 @@
+.new-task-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.input-label-text {
+  color: #fca311;
+  text-align: center;
+  font-size: x-large;
+  font-weight: bolder;
+  user-select: none;
+}
+
+.text-box-and-submit-button-container {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  padding: 1rem 0 1rem 0;
+
+  #text-input-field {
+    border: 1px solid #fca311;
+    flex-grow: 1;
+    font-size: medium;
+    padding: 10px 10px;
+    border-radius: 10px;
+    background-color: black;
+    color: #fca311;
+    font-family: "Poppins";
+  }
+  #text-input-field::placeholder {
+    color: #fca2119c;
+    font-family: "Poppins";
+    padding: 10px 10px;
+  }
+}
+
+.add-button {
+  font-family: "Poppins";
+  border: 1px solid #203f75;
+  background-color: #203f75;
+  color: #a5c6fa;
+  padding: 10px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  outline: none;
+  font-size: large;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.add-button:hover {
+  cursor: pointer;
+  background-color: #0f1d35;
+}

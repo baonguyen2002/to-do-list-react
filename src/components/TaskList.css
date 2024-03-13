@@ -1,0 +1,73 @@
+.no-task-notice {
+  text-align: center;
+  font-size: large;
+  color: #fca311;
+  font-size: larger;
+}
+
+h1 {
+  text-align: center;
+  color: #fca311;
+  user-select: none;
+}
+
+.filter-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 5px;
+  justify-content: space-between;
+}
+
+.filter-container .view-text {
+  color: #fca311;
+  font-weight: bolder;
+  font-size: large;
+  height: inherit;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.filter-container button {
+  padding: 10px;
+  border-radius: 10px;
+  appearance: none;
+  border-style: solid;
+  font-family: inherit;
+  font-size: large;
+}
+
+.filter-container .category-button {
+  background-color: black;
+  color: #fca311;
+  margin-left: 10px;
+  transition: transform 0.4s ease-in-out;
+}
+
+.filter-container .category-button:hover {
+  cursor: pointer;
+  background-color: #3e8e41;
+  box-shadow: 0 3px #666;
+  transform: translateY(2px);
+}
+
+.filter-container .active-button {
+  cursor: pointer;
+  background-color: #3e8e41;
+  box-shadow: 0 3px #666;
+  transform: translateY(2px);
+}
+
+.filter-container .completed-delete-button {
+  font-weight: bold;
+  border: 1px solid #203f75;
+  background-color: #203f75;
+  color: #a5c6fa;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.filter-container .completed-delete-button:hover {
+  cursor: pointer;
+  background-color: #0f1d35;
+}
