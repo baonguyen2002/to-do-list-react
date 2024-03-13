@@ -17,6 +17,7 @@ export default function TaskItem({
   deleteTask,
   setOngoing,
   setCompleted,
+  ignore,
 }) {
   return (
     <div className={`item-container `}>
@@ -73,7 +74,10 @@ export default function TaskItem({
           </button>
         )}
       </div>
-      <button className="delete-button" onClick={() => deleteTask(id)}>
+      <button
+        className={`delete-button ${ignore ? "ignore-input" : ""}`}
+        onClick={() => deleteTask(id)}
+      >
         <FontAwesomeIcon icon={faTrash} />
       </button>
     </div>

@@ -10,6 +10,7 @@ export default function TaskList({
   setIncomplete,
   deleteAllCompletedTasks,
   editTask,
+  ignore,
 }) {
   const [load, setLoad] = useState(-1);
   return (
@@ -58,6 +59,7 @@ export default function TaskList({
             return (
               <TaskItem
                 {...task}
+                ignore={ignore}
                 key={task.id}
                 setCompleted={setCompleted}
                 deleteTask={deleteTask}
@@ -69,6 +71,7 @@ export default function TaskList({
           } else if (task.stageOfCompletion === load) {
             return (
               <TaskItem
+                ignore={ignore}
                 {...task}
                 key={task.id}
                 setCompleted={setCompleted}

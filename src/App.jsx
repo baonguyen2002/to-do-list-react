@@ -11,6 +11,7 @@ const deletedToast = () =>
   });
 function App() {
   const [newTask, setNewTask] = useState("");
+  const [ignore, setIgnore] = useState(false);
   const [notif, setNotif] = useState(false);
   const [id, setId] = useState("");
   const [taskList, setTaskList] = useState(() => {
@@ -95,6 +96,7 @@ function App() {
   }
   function editTask(title, id) {
     setNotif("editing");
+    setIgnore(true);
     setId(id);
     setNewTask(title);
   }
@@ -109,6 +111,7 @@ function App() {
         notif={notif}
         id={id}
         setNotif={setNotif}
+        setIgnore={setIgnore}
       />
       <TaskList
         taskList={taskList}
@@ -118,6 +121,7 @@ function App() {
         setCompleted={setCompleted}
         deleteAllCompletedTasks={deleteAllCompletedTasks}
         editTask={editTask}
+        ignore={ignore}
       />
     </div>
   );

@@ -23,6 +23,7 @@ export default function NewTaskForm({
   notif,
   id,
   setNotif,
+  setIgnore,
 }) {
   function handleSubmit(e) {
     if (notif === "editing") {
@@ -31,6 +32,7 @@ export default function NewTaskForm({
       setNewTask("");
       setNotif(false);
       editedToast();
+      setIgnore(false);
     } else {
       e.preventDefault();
       if (newTask.trim() === "") {

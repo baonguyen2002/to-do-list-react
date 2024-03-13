@@ -54,19 +54,14 @@
 }
 
 .notif {
-  background-color: #28a745;
   border-radius: 10px;
   padding-left: 20px;
   font-weight: bolder;
   font-size: large;
-  color: rgb(255, 255, 255);
+  color: #100f21;
   user-select: none;
 }
 
-.success {
-  background-color: #28a745;
-}
-
 .warning {
-  background-color: #c49302;
+  background-color: #f0b432;
 }
