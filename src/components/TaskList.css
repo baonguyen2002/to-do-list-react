@@ -1,13 +1,13 @@
 .no-task-notice {
   text-align: center;
   font-size: large;
-  color: #fca311;
+  color: #100f21;
   font-size: larger;
 }
 
 h1 {
   text-align: center;
-  color: #fca311;
+  color: #100f21;
   user-select: none;
 }
 
@@ -20,7 +20,7 @@ h1 {
 }
 
 .filter-container .view-text {
-  color: #fca311;
+  color: #100f21;
   font-weight: bolder;
   font-size: large;
   height: inherit;
@@ -39,14 +39,14 @@ h1 {
 }
 
 .filter-container .category-button {
-  background-color: black;
-  color: #fca311;
+  background-color: #cbf0fb;
+  color: #100f21;
   transition: transform 0.4s ease-in-out;
 }
 
 .filter-container .category-button:hover {
   cursor: pointer;
-  background-color: #fca311;
+  background-color: #cbf0fb;
   color: black;
   box-shadow: 0 3px #666;
   transform: translateY(2px);
@@ -54,7 +54,7 @@ h1 {
 
 .filter-container .active-button {
   cursor: pointer;
-  background-color: #fca311;
+  background-color: #f1c666;
   box-shadow: 0 3px #666;
   transform: translateY(2px);
   color: black;

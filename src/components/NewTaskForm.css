@@ -5,7 +5,7 @@
 }
 
 .input-label-text {
-  color: #fca311;
+  color: #100f21;
   text-align: center;
   font-size: x-large;
   font-weight: bolder;
@@ -19,17 +19,17 @@
   padding: 1rem 0 1rem 0;
 
   #text-input-field {
-    border: 1px solid #fca311;
+    border: 1px solid #100f21;
     flex-grow: 1;
     font-size: medium;
     padding: 10px 10px;
     border-radius: 10px;
-    background-color: black;
-    color: #fca311;
+    background-color: #397cd6;
+    color: #cbf0fb;
     font-family: "Poppins";
   }
   #text-input-field::placeholder {
-    color: #fca2119c;
+    color: #cbf0fb;
     font-family: "Poppins";
     padding: 10px 10px;
   }
