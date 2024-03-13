@@ -52,3 +52,20 @@
   cursor: pointer;
   background-color: #0f1d35;
 }
+
+.notif {
+  background-color: #28a745;
+  border-radius: 10px;
+  padding-left: 20px;
+  font-weight: bolder;
+  font-size: large;
+  color: rgb(255, 255, 255);
+}
+
+.success {
+  background-color: #28a745;
+}
+
+.warning {
+  background-color: #c49302;
+}

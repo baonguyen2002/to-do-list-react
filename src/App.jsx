@@ -3,23 +3,53 @@ import { useEffect, useState } from "react";
 import NewTaskForm from "./components/NewTaskForm";
 import TaskList from "./components/TaskList";
 function App() {
+  const [newTask, setNewTask] = useState("");
+  const [notif, setNotif] = useState(false);
+  const [id, setId] = useState("");
   const [taskList, setTaskList] = useState(() => {
     const localData = localStorage.getItem("TaskList");
     if (localData == null) return [];
 
     return JSON.parse(localData);
   });
+
   useEffect(() => {
     localStorage.setItem("TaskList", JSON.stringify(taskList));
   }, [taskList]);
-  function addTask(title) {
-    setTaskList((currentTaskList) => {
-      return [
-        { id: crypto.randomUUID(), title: title, stageOfCompletion: 0 },
-        ...currentTaskList,
-      ];
-    });
+
+  function addTask(title, id) {
+    if (id) {
+      console.log(id);
+      setTaskList((taskList) =>
+        taskList.map((task) => {
+          if (task.id === id) {
+            return { ...task, title: title };
+          }
+          return task;
+        })
+      );
+    } else {
+      setTaskList((currentTaskList) => {
+        return [
+          { id: crypto.randomUUID(), title: title, stageOfCompletion: 0 },
+          ...currentTaskList,
+        ];
+      });
+    }
+    if (notif === "editing") {
+      setNotif(false);
+    } else {
+      setNotif("new");
+    }
   }
+
+  useEffect(() => {
+    if (notif === "new" || notif === "deleted" || notif === "edited") {
+      setTimeout(() => {
+        setNotif(false);
+      }, 2000);
+    }
+  }, [notif]);
 
   function deleteAllCompletedTasks() {
     setTaskList((taskList) => {
@@ -66,11 +96,28 @@ function App() {
     setTaskList((taskList) => {
       return taskList.filter((task) => task.id != id);
     });
+    if (notif === "editing") {
+      setNotif(false);
+    } else {
+      setNotif("deleted");
+    }
+  }
+  function editTask(title, id) {
+    setNotif("editing");
+    setId(id);
+    setNewTask(title);
   }
 
   return (
     <div className="app-container">
-      <NewTaskForm addTask={addTask} />
+      <NewTaskForm
+        addTask={addTask}
+        newTask={newTask}
+        setNewTask={setNewTask}
+        notif={notif}
+        id={id}
+        setNotif={setNotif}
+      />
       <TaskList
         taskList={taskList}
         setOngoing={setOngoing}
@@ -78,6 +125,7 @@ function App() {
         deleteTask={deleteTask}
         setCompleted={setCompleted}
         deleteAllCompletedTasks={deleteAllCompletedTasks}
+        editTask={editTask}
       />
     </div>
   );

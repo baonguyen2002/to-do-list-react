@@ -9,6 +9,7 @@ export default function TaskList({
   setOngoing,
   setIncomplete,
   deleteAllCompletedTasks,
+  editTask,
 }) {
   const [load, setLoad] = useState(-1);
   return (
@@ -62,6 +63,7 @@ export default function TaskList({
                 deleteTask={deleteTask}
                 setOngoing={setOngoing}
                 setIncomplete={setIncomplete}
+                editTask={editTask}
               />
             );
           } else if (task.stageOfCompletion === load) {
@@ -73,6 +75,7 @@ export default function TaskList({
                 deleteTask={deleteTask}
                 setOngoing={setOngoing}
                 setIncomplete={setIncomplete}
+                editTask={editTask}
               />
             );
           }

@@ -6,8 +6,10 @@ import {
   faPlay,
   faUndoAlt,
   faCheck,
+  faEdit,
 } from "@fortawesome/free-solid-svg-icons";
 export default function TaskItem({
+  editTask,
   id,
   title,
   stageOfCompletion,
@@ -40,6 +42,12 @@ export default function TaskItem({
         </p>
       </div>
       <div>
+        <button
+          onClick={() => editTask(title, id)}
+          className="edit-task-button"
+        >
+          <FontAwesomeIcon icon={faEdit} />
+        </button>
         {stageOfCompletion > 0 && (
           <button
             className="mark-incomplete-button"
