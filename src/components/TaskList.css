@@ -41,22 +41,23 @@ h1 {
 .filter-container .category-button {
   background-color: black;
   color: #fca311;
-  margin-left: 10px;
   transition: transform 0.4s ease-in-out;
 }
 
 .filter-container .category-button:hover {
   cursor: pointer;
-  background-color: #3e8e41;
+  background-color: #fca311;
+  color: black;
   box-shadow: 0 3px #666;
   transform: translateY(2px);
 }
 
 .filter-container .active-button {
   cursor: pointer;
-  background-color: #3e8e41;
+  background-color: #fca311;
   box-shadow: 0 3px #666;
   transform: translateY(2px);
+  color: black;
 }
 
 .filter-container .completed-delete-button {
