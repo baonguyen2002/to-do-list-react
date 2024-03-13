@@ -2,6 +2,13 @@ import "./App.css";
 import { useEffect, useState } from "react";
 import NewTaskForm from "./components/NewTaskForm";
 import TaskList from "./components/TaskList";
+import toast, { Toaster } from "react-hot-toast";
+const deletedToast = () =>
+  toast.success("Task Deleted Successfully.", {
+    duration: 2000,
+    position: "top-center",
+    style: { userSelect: "none" },
+  });
 function App() {
   const [newTask, setNewTask] = useState("");
   const [notif, setNotif] = useState(false);
@@ -38,22 +45,13 @@ function App() {
     }
   }
 
-  useEffect(() => {
-    console.log(notif);
-    if (notif === "new" || notif === "deleted" || notif === "edited") {
-      setTimeout(() => {
-        setNotif(false);
-      }, 350);
-    }
-  }, [notif]);
-
   function deleteAllCompletedTasks() {
     setTaskList((taskList) => {
       return taskList.filter((task) => {
         return task.stageOfCompletion != 2;
       });
     });
-    setNotif("deleted");
+    deletedToast();
   }
 
   function setOngoing(id) {
@@ -93,7 +91,7 @@ function App() {
     setTaskList((taskList) => {
       return taskList.filter((task) => task.id != id);
     });
-    setNotif("deleted");
+    deletedToast();
   }
   function editTask(title, id) {
     setNotif("editing");
@@ -103,6 +101,7 @@ function App() {
 
   return (
     <div className="app-container">
+      <Toaster />
       <NewTaskForm
         addTask={addTask}
         newTask={newTask}
