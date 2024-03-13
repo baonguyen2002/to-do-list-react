@@ -53,6 +53,7 @@ function App() {
         return task.stageOfCompletion != 2;
       });
     });
+    setNotif("deleted");
   }
 
   function setOngoing(id) {
