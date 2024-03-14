@@ -60,6 +60,7 @@ The project ultizes React Framework. Key components include:
 ## 5. Dependencies
 
 - **React JS:** Used for building the application, installed via `npm`.
+- **React Hot Toast:** Used for displaying upon adding, deleting or editing tasks, installed via `npm`.
 - **Font Awesome:** Icons library, installed via `npm`.
 - **Google Fonts (Poppins):** Font used for the application, linked in the `index.css` file.
 
