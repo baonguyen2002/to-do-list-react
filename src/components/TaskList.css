@@ -46,7 +46,7 @@ h1 {
 
 .filter-container .category-button:hover {
   cursor: pointer;
-  background-color: #cbf0fb;
+  background-color: #f1c666;
   color: black;
   box-shadow: 0 3px #666;
   transform: translateY(2px);
